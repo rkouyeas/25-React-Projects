@@ -1,0 +1,18 @@
+.star-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.star-container > div {
+  padding: 1rem;
+}
+
+.star {
+  font-size: 3rem;
+}
+
+.fill {
+  color: gold;
+}
