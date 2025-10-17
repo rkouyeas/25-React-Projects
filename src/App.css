@@ -1,19 +1,13 @@
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
-  padding-block: 5rem;
-}
-
-main > * {
-  flex: 0 0 auto;
-}
-
 .main-title {
   text-align: center;
 }
 
-.wrapper {
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  padding-block: 10rem;
   max-width: 1200px;
   padding-inline: 1rem;
   margin-inline: auto;
