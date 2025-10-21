@@ -1,0 +1,33 @@
+.treeview-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar-container {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: #5252c0;
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  list-style: none;
+}
+
+.list > li {
+  display: flex;
+  gap: 1rem;
+}
+
+.list button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
