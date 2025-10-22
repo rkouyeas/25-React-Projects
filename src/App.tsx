@@ -4,6 +4,7 @@ import StarRating from "./components/StarRating";
 import ImageSlider from "./components/ImageSlider";
 import LoadMore from "./components/LoadMore";
 import TreeView from "./components/TreeView";
+import QRCodeGenerator from "./components/QRCodeGenerator";
 import "./App.css";
 
 const App = () => {
@@ -20,7 +21,9 @@ const App = () => {
         <LoadMore url="https://dummyjson.com/products" limit={10} />
       </div>
       <TreeView />
-      <div className="main-wrapper"></div>
+      <div className="main-wrapper">
+        <QRCodeGenerator />
+      </div>
     </main>
   );
 };
