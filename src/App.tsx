@@ -5,6 +5,7 @@ import ImageSlider from "./components/ImageSlider";
 import LoadMore from "./components/LoadMore";
 import TreeView from "./components/TreeView";
 import QRCodeGenerator from "./components/QRCodeGenerator";
+import DarkMode from "./components/DarkMode";
 import "./App.css";
 
 const App = () => {
@@ -24,6 +25,8 @@ const App = () => {
       <div className="main-wrapper">
         <QRCodeGenerator />
       </div>
+      <DarkMode />
+      <div className="main-wrapper"></div>
     </main>
   );
 };
