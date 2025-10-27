@@ -6,11 +6,13 @@ import LoadMore from "./components/LoadMore";
 import TreeView from "./components/TreeView";
 import QRCodeGenerator from "./components/QRCodeGenerator";
 import DarkMode from "./components/DarkMode";
+import ScrollIndicator from "./components/ScrollIndicator";
 import "./App.css";
 
 const App = () => {
   return (
     <main>
+      <ScrollIndicator />
       <div className="main-wrapper">
         <h1 className="main-title">25 React Projects</h1>
         <Accordion style={{ maxWidth: "500px", marginInline: "auto" }} />

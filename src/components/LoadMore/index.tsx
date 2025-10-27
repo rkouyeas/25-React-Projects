@@ -11,7 +11,7 @@ type LoadMoreProps = {
 const LoadMore = ({ url, limit = 10 }: LoadMoreProps) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [skip, setSkip] = useState<number>(0);
-  const hasMounted = useRef(false); //Used to prevent redundant rerendering that would otherwise be caused by the loading state
+  const hasMounted = useRef(false); //Used to prevent rerendering that would otherwise be caused by the loading state
   const {
     data: productData,
     loading,
@@ -39,19 +39,17 @@ const LoadMore = ({ url, limit = 10 }: LoadMoreProps) => {
   if (!products || !products.length) return <p>No products found!</p>;
 
   return (
-    <>
-      <div className={styles["products-container"]}>
-        {products &&
-          products.length &&
-          products.map((product) => (
-            <div key={product.id} className={`${styles["product-card"]}`}>
-              <img src={product.thumbnail} alt={product.title} />
-              <p>{product.title}</p>
-            </div>
-          ))}
-        <button onClick={loadMore}>Load More</button>
-      </div>
-    </>
+    <div className={styles["products-container"]}>
+      {products &&
+        products.length &&
+        products.map((product) => (
+          <div key={product.id} className={`${styles["product-card"]}`}>
+            <img src={product.thumbnail} alt={product.title} />
+            <p>{product.title}</p>
+          </div>
+        ))}
+      <button onClick={loadMore}>Load More</button>
+    </div>
   );
 };
 
