@@ -7,6 +7,7 @@ import TreeView from "./components/TreeView";
 import QRCodeGenerator from "./components/QRCodeGenerator";
 import DarkMode from "./components/DarkMode";
 import ScrollIndicator from "./components/ScrollIndicator";
+import TabsTest from "./components/Tabs/TabsTest";
 import "./App.css";
 
 const App = () => {
@@ -28,7 +29,9 @@ const App = () => {
         <QRCodeGenerator />
       </div>
       <DarkMode />
-      <div className="main-wrapper"></div>
+      <div className="main-wrapper">
+        <TabsTest />
+      </div>
     </main>
   );
 };

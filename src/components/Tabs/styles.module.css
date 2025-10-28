@@ -1,0 +1,20 @@
+.tabs-navigation-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs-navigation-container > button {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #dcdcdc;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.tabs-navigation-container > button.selected {
+  border-bottom: 2px solid #5656f2;
+  color: #5656f2;
+}
