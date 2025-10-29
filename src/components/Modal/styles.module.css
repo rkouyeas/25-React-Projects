@@ -1,0 +1,71 @@
+.modal-test-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem; /* Remove this later */
+}
+
+.modal-test-button {
+  padding: 1rem 1.5rem;
+  border: 3px #007acc solid;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #007acc;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.modal-test-button:hover {
+  color: #007acc;
+  background-color: transparent;
+}
+
+/*Modal Overlay Stying */
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.502);
+  backdrop-filter: blur(2px);
+}
+
+/* Modal Popup Styling */
+.modal {
+  width: 90%;
+  max-width: 500px;
+  max-height: 90%;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header Styling */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.102);
+}
+
+.modal-header > h1 {
+  flex: 1 1 0;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modal-header > button {
+  flex: 0 0 auto;
+  border: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}

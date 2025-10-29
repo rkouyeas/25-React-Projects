@@ -8,6 +8,7 @@ import QRCodeGenerator from "./components/QRCodeGenerator";
 import DarkMode from "./components/DarkMode";
 import ScrollIndicator from "./components/ScrollIndicator";
 import TabsTest from "./components/Tabs/TabsTest";
+import ModalTest from "./components/Modal/ModalTest";
 import "./App.css";
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
       <DarkMode />
       <div className="main-wrapper">
         <TabsTest />
+        <ModalTest />
       </div>
     </main>
   );
