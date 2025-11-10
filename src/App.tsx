@@ -9,6 +9,7 @@ import DarkMode from "./components/DarkMode";
 import ScrollIndicator from "./components/ScrollIndicator";
 import TabsTest from "./components/Tabs/TabsTest";
 import ModalTest from "./components/Modal/ModalTest";
+import GitHubProfileFinder from "./components/GitHubProfileFinder";
 import "./App.css";
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
       <div className="main-wrapper">
         <TabsTest />
         <ModalTest />
+        <GitHubProfileFinder />
       </div>
     </main>
   );
