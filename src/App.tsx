@@ -10,6 +10,7 @@ import ScrollIndicator from "./components/ScrollIndicator";
 import TabsTest from "./components/Tabs/TabsTest";
 import ModalTest from "./components/Modal/ModalTest";
 import GitHubProfileFinder from "./components/GitHubProfileFinder";
+import SearchAutocomplete from "./components/SearchAutoComplete";
 import "./App.css";
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <TabsTest />
         <ModalTest />
         <GitHubProfileFinder />
+        <SearchAutocomplete />
       </div>
     </main>
   );

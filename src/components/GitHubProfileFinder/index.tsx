@@ -36,7 +36,7 @@ const GitHubProfileFinder = () => {
       </form>
       <div className={styles["profile-details"]}>
         {error ? (
-          <p>{error.message}</p>
+          <p>Unable to find user</p>
         ) : loading ? (
           <p>Loading...</p>
         ) : (
