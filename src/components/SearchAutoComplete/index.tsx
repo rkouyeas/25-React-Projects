@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import useFetch from "../../hooks/useFetch";
 import useDebounce from "../../hooks/useDebounce";
 import styles from "./styles.module.css";
@@ -7,12 +7,19 @@ import type { UserInfo, UserMinimal } from "./types";
 const SearchAutocomplete = () => {
   const [query, setQuery] = useState<string>("");
   const [foundNames, setFoundNames] = useState<UserMinimal[]>([]);
+
   const { data, loading, error } = useFetch<UserInfo>(
     "https://dummyjson.com/users"
   );
-  const usersMinimal: UserMinimal[] = data
-    ? data.users.map((user) => ({ id: user.id, firstName: user.firstName }))
-    : [];
+
+  const usersMinimal = useMemo<UserMinimal[]>(() => {
+    if (!data) return [];
+    return data.users.map((u) => ({
+      id: u.id,
+      firstName: u.firstName,
+    }));
+  }, [data]);
+
   const debouncedQuery = useDebounce<string>(query);
 
   useEffect(() => {
@@ -21,9 +28,11 @@ const SearchAutocomplete = () => {
       return;
     }
 
+    const lower = debouncedQuery.toLowerCase();
+
     setFoundNames(
       usersMinimal.filter((user) =>
-        user.firstName.toLowerCase().startsWith(debouncedQuery.toLowerCase())
+        user.firstName.toLowerCase().startsWith(lower)
       )
     );
   }, [debouncedQuery, usersMinimal]);

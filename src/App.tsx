@@ -11,6 +11,7 @@ import TabsTest from "./components/Tabs/TabsTest";
 import ModalTest from "./components/Modal/ModalTest";
 import GitHubProfileFinder from "./components/GitHubProfileFinder";
 import SearchAutocomplete from "./components/SearchAutoComplete";
+import TicTacToe from "./components/TicTacToe";
 import "./App.css";
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
         <ModalTest />
         <GitHubProfileFinder />
         <SearchAutocomplete />
+        <TicTacToe />
       </div>
     </main>
   );

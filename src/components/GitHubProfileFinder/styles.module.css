@@ -12,6 +12,7 @@
 }
 
 .form > input {
+  min-width: 0;
   padding: 1rem;
   border: none;
   outline: none;
