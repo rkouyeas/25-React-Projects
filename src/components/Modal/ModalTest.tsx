@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 import Modal from ".";
 import styles from "./styles.module.css";
 
 const ModalTest = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const toggleModal = () => {
     setShowModal((prevShowModal) => !prevShowModal);
   };
+
+  useOnClickOutside(modalRef, () => setShowModal(false));
 
   return (
     <div className={styles["modal-test-container"]}>
@@ -15,7 +19,7 @@ const ModalTest = () => {
         Display Modal
       </button>
       {showModal && (
-        <Modal>
+        <Modal ref={modalRef}>
           <Modal.Header onClose={toggleModal}>Modal</Modal.Header>
           <Modal.Content>
             <p style={{ paddingBlock: "1rem" }}>

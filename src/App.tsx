@@ -13,6 +13,7 @@ import GitHubProfileFinder from "./components/GitHubProfileFinder";
 import SearchAutocomplete from "./components/SearchAutoComplete";
 import TicTacToe from "./components/TicTacToe";
 import "./App.css";
+import WindowResize from "./components/WindowResize";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
         <GitHubProfileFinder />
         <SearchAutocomplete />
         <TicTacToe />
+        <WindowResize />
       </div>
     </main>
   );
