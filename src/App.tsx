@@ -14,6 +14,7 @@ import SearchAutocomplete from "./components/SearchAutoComplete";
 import TicTacToe from "./components/TicTacToe";
 import "./App.css";
 import WindowResize from "./components/WindowResize";
+import ScrollTopBottom from "./components/ScrollTopBottom";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
         <SearchAutocomplete />
         <TicTacToe />
         <WindowResize />
+        <ScrollTopBottom />
       </div>
     </main>
   );
