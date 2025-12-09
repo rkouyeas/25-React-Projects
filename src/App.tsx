@@ -15,6 +15,7 @@ import TicTacToe from "./components/TicTacToe";
 import "./App.css";
 import WindowResize from "./components/WindowResize";
 import ScrollTopBottom from "./components/ScrollTopBottom";
+import WeatherApp from "./components/WeatherApp";
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
         <TicTacToe />
         <WindowResize />
         <ScrollTopBottom />
+        <WeatherApp />
       </div>
     </main>
   );

@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 
-const useFetch = <T,>(url: string) => {
+const useFetch = <T,>(url: string | null) => {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    if (!url) return;
+    const controller = new AbortController();
+
     const fetchData = async () => {
       setLoading(true);
       setError(null);
@@ -26,7 +29,6 @@ const useFetch = <T,>(url: string) => {
       }
     };
 
-    const controller = new AbortController();
     fetchData();
 
     return () => {
